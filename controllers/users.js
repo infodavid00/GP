@@ -29,8 +29,7 @@ const getUserInfo = async (req, res) => {
 
 const register = async (req, res, next) => {
   try {
-    const { email, password, username, gender, bio, age, address } = req.body;
-
+    const { email, password } = req.body;
     // Validate email format
     if (!validator.isEmail(email)) {
       return res.status(400).json({
@@ -50,24 +49,19 @@ const register = async (req, res, next) => {
       });
     }
 
-    // Check if username already exists
-    const existingUsername = await User.findOne({ username });
-    if (existingUsername) {
-      return res.status(400).json({
-        code: 400,
-        message: 'Username already exists',
-        details: 'Please choose a different username'
-      });
-    }
+    // // Check if username already exists
+    // const existingUsername = await User.findOne({ username });
+    // if (existingUsername) {
+    //   return res.status(400).json({
+    //     code: 400,
+    //     message: 'Username already exists',
+    //     details: 'Please choose a different username'
+    //   });
+    // }
 
     const user = new User({
       email,
-      password,
-      username,
-      gender,
-      age,
-      bio,
-      address
+      password
     });
 
     await user.save();

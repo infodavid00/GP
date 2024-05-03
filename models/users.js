@@ -19,26 +19,6 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  username: {
-    type: String,
-    required: true,
-  },
-  bio: {
-    type: String,
-    required: true,
-  },
-  address: {
-    type: String,
-    required: true,
-  },
-  age: {
-    type: String,
-    required: true,
-  },
-  gender: {
-    type: String,
-    required: true,
-  },
   courses: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Courses', default: [] }],
   role: { type: String, enum: ['admin', 'user'], default: 'user' },
 });
