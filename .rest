@@ -1,0 +1,18 @@
+
+# POST http://localhost:10000/users/register
+# Content-Type: application/json
+
+# {
+#  "email": "da40au@mail.com",
+#  "username": "albert2",
+#  "password": "12456788",
+#  "bio": "welcome to my youtube chanel",
+#  "age": "230",
+#  "gender": "male",
+#  "address": "234 BOX"
+# }
+
+
+# GET http://localhost:10000/users/info
+# Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MzQ3M2IzNjM4ZjM4NzBhZGZiZDBmZCIsImlhdCI6MTcxNDcxMzU2MiwiZXhwIjoxNzE0NzE3MTYyfQ.Ki9kSohFjQQdp1Paw3R7ckaWJVQPEMJT_8--rxsK1zs
